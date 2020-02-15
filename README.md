@@ -12,7 +12,7 @@ O arquivo "grafo.json" será configurado informando seus vértices, dentro dos s
   
 Exemplo da representação de um grafo com seu .json:
 
-![Exemplo do grafo](https://imgur.com/ennmXs1)
+![Exemplo do grafo](https://i.imgur.com/ennmXs1.png)
 
 ```
 {
