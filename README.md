@@ -1,6 +1,6 @@
 # Implementação grafos
 Implementação do algoritmo para matéria Teoria dos Grafos 
-Alunos: Vinícius Mendonça e Leonardo
+Alunos: Vinícius Mendonça e Leonardo Teles
 
 ## Inicialização
   
