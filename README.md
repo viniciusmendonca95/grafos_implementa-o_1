@@ -14,6 +14,7 @@ Exemplo da representação de um grafo com seu .json:
 
 ![Exemplo do grafo](https://imgur.com/ennmXs1)
 
+```
 {
     "vertices" : [ "A", "B", "C", "D", "E", "F", "G", "H"],
     "A": [{"B":1}, {"C": 2}],
@@ -25,6 +26,8 @@ Exemplo da representação de um grafo com seu .json:
     "G": [{"F":1}, {"H": 2}],
     "H": [{"F":1}, {"G": 2}]
 }
+
+```
 
 ## Métodos
 
