@@ -1,5 +1,6 @@
 import util as ut
 import erros as e
+import metodos as met
 
 #Função para gerar o menu principal
 def menuPrincipal():
@@ -18,19 +19,30 @@ def menuPrincipal():
         op = e.tratarMenu(msg)
         if op == 1:
             grafo = ut.lerGrafo()
-            print(f"Representação do grafo com seus adjacentes e pesos de arestas:\n{grafo}")
+            print(f"Representação do grafo dos seus vértices com seus adjacentes e pesos de arestas:\n{grafo}")
             print()
         if op == 2:
-            print("Está opção ainda será implementada")
+            grafo = ut.lerGrafo()
+            vertice = input("Informe o vértice: ").upper()
+            if vertice not in grafo:
+                print("Vértice não encontrado no grafo")
+            else:
+                adjacentes = met.getAdjacentes(vertice)
+                print(f"Os adjacentes ao vértice {vertice}: {adjacentes}")
             print()
         if op == 3:
-            print("Está opção ainda será implementada")
+            print(f"Verificação se o grafo é regular: {met.ehRegular()}")
             print()
         if op == 4:
-            print("Está opção ainda será implementada")
+            print(f"Verificação se o grafo é completo: {met.ehCompleto()}")
             print()
         if op == 5:
-            print("Está opção ainda será implementada")
+            grafo = ut.lerGrafo()
+            raiz = input("Informe o vértice raiz: ").upper()
+            if raiz not in grafo:
+                print("Vértice não encontrado no grafo")
+            else:
+                print(f"Verificação se o grafo é conexo: {met.ehConexo(raiz)}")
             print()
         if op == 6:
             print("Está opção ainda será implementada")

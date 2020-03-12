@@ -9,3 +9,4 @@ def lerGrafo():
         for v in vertices:
             dic[v] = arq[v]
         return dic
+
