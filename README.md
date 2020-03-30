@@ -32,9 +32,6 @@ Exemplo da representação de um grafo com seu .json:
 Os seguintes métodos básicos foram implementados: 
 
   * <p><b>Representação do grafo:</b> Através de uma lista de adjacentes, configurada no "grafo.json", retorna um dicionário contendo todo o grafo, seus vértices, seus respectivos adjacentes e pesos.</p>
-  
-Os seguintes métodos básicos foram implementados: 
-
   * <p><b>getAdjacentes:</b> Retorna a lista de adjacentes de um vértice passado como parâmetro.</p>
   * <p><b>ehRegular:</b> Verifica se um determinado grafo é regular ou não. Retorna True ou False a depender do grafo.</p>
   * <p><b>ehCompleto:</b> Verifica se um determinado grafo é completo ou não. Retorna True ou False a depender do grafo.</p> 
