@@ -12,20 +12,18 @@ O arquivo "grafo.json" será configurado informando seus vértices, dentro dos s
   
 Exemplo da representação de um grafo com seu .json:
 
-![Exemplo do grafo](https://i.imgur.com/ennmXs1.png)
+![Exemplo do grafo](https://i.imgur.com/dh3NqNV.jpg)
 
 ```
 {
-    "vertices" : [ "A", "B", "C", "D", "E", "F", "G", "H"],
-    "A": [{"B":1}, {"C": 2}],
-    "B": [{"A":1}, {"D": 2}, {"E": 3}],
-    "C": [{"A":1}, {"D": 2}],
-    "D": [{"B":1}, {"C": 2}, {"E": 3}, {"F": 4}],
-    "E": [{"B":1}, {"D": 2}],
-    "F": [{"D":1}, {"G": 2}, {"H": 3}],
-    "G": [{"F":1}, {"H": 2}],
-    "H": [{"F":1}, {"G": 2}]
+    "vertices" : [ "T", "U", "X", "V", "Y"],
+    "T": [{"U":10}, {"X": 5}],
+    "U": [{"X":2}, {"V": 1}],
+    "X": [{"U":3}, {"V": 9}, {"Y": 2}],
+    "V": [{"Y":4}],
+    "Y": [{"V":6}, {"T": 7}]
 }
+
 
 ```
 
@@ -35,10 +33,16 @@ Os seguintes métodos básicos foram implementados:
 
   * <p><b>Representação do grafo:</b> Através de uma lista de adjacentes, configurada no "grafo.json", retorna um dicionário contendo todo o grafo, seus vértices, seus respectivos adjacentes e pesos.</p>
   
-Os seguintes métodos básicos serão ser implementados: 
+Os seguintes métodos básicos foram implementados: 
 
   * <p><b>getAdjacentes:</b> Retorna a lista de adjacentes de um vértice passado como parâmetro.</p>
   * <p><b>ehRegular:</b> Verifica se um determinado grafo é regular ou não. Retorna True ou False a depender do grafo.</p>
   * <p><b>ehCompleto:</b> Verifica se um determinado grafo é completo ou não. Retorna True ou False a depender do grafo.</p> 
   * <p><b>ehConexo:</b> Verifica se um determinado grafo é conexo ou não. Retorna True ou False a depender do grafo. Utiliza o algoritimo de busca em largura.</p>
+ 
+Duas versões do algoritmo de Dijkstra foram implementados:
+
+<p><b>Algoritmo de Menor Caminho (Dijkstra):</b> 
+* <p>A primeira recebe como parâmetro um vértice e o algoritmo retorna o menor caminho deste para todos os demais vértices.</p>
+* <p>A segunda recebe como parâmetro dois vértices e o algoritmo retorna o menor caminho somente entre estes dois vértices.</p>
   
