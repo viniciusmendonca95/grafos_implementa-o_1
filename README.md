@@ -41,6 +41,6 @@ Duas versões do algoritmo de Dijkstra foram implementados:
 
 <p><b>Algoritmo de Menor Caminho (Dijkstra):</b> 
   
-  * <p>A primeira recebe como parâmetro um vértice e o algoritmo retorna o menor caminho deste para todos os demais vértices.</p>
-  * <p>A segunda recebe como parâmetro dois vértices e o algoritmo retorna o menor caminho somente entre estes dois vértices.</p>
+  * <p>A primeira versão recebe como parâmetro um vértice e o algoritmo retorna o menor caminho deste para todos os demais vértices.</p>
+  * <p>A segunda versão recebe como parâmetro dois vértices e o algoritmo retorna o menor caminho somente entre estes dois vértices.</p>
   
