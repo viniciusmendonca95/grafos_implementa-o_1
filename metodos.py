@@ -65,6 +65,7 @@ def ehConexo(raiz):
         return False
     else:
         return True
+<<<<<<< HEAD
 
 
 #Algoritimo de Djikstra que retorna os menor caminho entre um vértice passado por parâmetro e todos os vértices do grafo
@@ -225,3 +226,5 @@ def Djikstra2(vert, vert2):
     # Printa o menor caminho de um vértice a outro vértice
     print(f"Distância minima de {raiz} para {vert2}: {dist[vertices.index(vert2)]}     O caminho: {caminho}")
 
+=======
+>>>>>>> Vinicius
