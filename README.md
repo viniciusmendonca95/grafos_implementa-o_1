@@ -1,5 +1,5 @@
 # Implementação grafos
-Implementação do algoritmo para matéria Teoria dos Grafos 
+Implementação do algoritmo de grafos para matéria Teoria dos Grafos ministrada pelo professor Adolfo Guimarães na Universidade Tiradentes - UNIT
 Alunos: Vinícius Mendonça e Leonardo Teles
 
 ## Inicialização
