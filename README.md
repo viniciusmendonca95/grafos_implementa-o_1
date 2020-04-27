@@ -1,4 +1,4 @@
-# Implementação grafos
+﻿# Implementação grafos
 Implementação do algoritmo de grafos para matéria Teoria dos Grafos ministrada pelo professor Adolfo Guimarães na Universidade Tiradentes - UNIT
 
 Alunos: Vinícius Mendonça e Leonardo Teles
@@ -11,9 +11,9 @@ Para a inicialização do algoritimo, é necessário configurar um arquivo "graf
   
 O arquivo "grafo.json" será configurado informando seus vértices, dentro dos seus vértices uma listas com objetos que contém seus adjacentes e seus respectivos pesos.
   
-Exemplo da representação de um grafo com seu .json:
+Exemplo da representação de grafos com seu .json que podem ser utilizados para testes no algoritmo:
 
-![Exemplo do grafo](https://i.imgur.com/dh3NqNV.jpg)
+![Grafo valorado](https://i.imgur.com/dh3NqNV.jpg)
 
 ```
 {
@@ -28,6 +28,71 @@ Exemplo da representação de um grafo com seu .json:
 
 ```
 
+![Grafo direcionado](https://i.imgur.com/qQ7bwjc.jpg)
+
+```
+{
+    "vertices" : [ "A", "B", "C", "D", "E", "F", "G", "H"],
+    "A": [{"C":0}, {"D": 0}],
+    "B": [{"D":0}, {"G": 0}],
+    "C": [{"E":0}, {"F": 0}],
+    "D": [{"F":0}],
+    "E": [],
+    "F": [{"H":0}],
+    "G": [{"H":0}],
+    "H": []
+}
+
+
+```
+
+![Grafo desconexo](https://i.imgur.com/R8VcGNL.jpg)
+
+```
+{
+    "vertices" : [ "A", "B", "C", "D", "E", "F"],
+    "A": [{"B":0}, {"D": 0}],
+    "B": [{"A":0}, {"C": 0}],
+    "C": [{"B":0}],
+    "D": [{"A":0}],
+    "E": [{"F":6}],
+    "F": [{"E":6}]
+}
+
+
+```
+
+![Grafo completo](https://i.imgur.com/sIcHkDf.jpg)
+
+```
+{
+    "vertices" : [ "A", "B", "C", "D"],
+    "A": [{"B":0}, {"C": 0},  {"D": 0}],
+    "B": [{"A":0}, {"C": 0},  {"D": 0}],
+    "C": [{"A":0}, {"B": 0},  {"D": 0}],
+    "D": [{"A":0}, {"B": 0},  {"C": 0}],
+}
+
+
+```
+
+![Grafo regular](https://i.imgur.com/zYIc1fj.jpg)
+
+```
+{
+    "vertices" : [ "A", "B", "C", "D", "E", "F"],
+    "A": [{"B":0}, {"C": 0}],
+    "B": [{"A":0}, {"D": 0}],
+    "C": [{"A":0}, {"E": 0}],
+    "D": [{"B":0}, {"F": 0}],
+    "E": [{"C":0}, {"F": 0}],
+    "F": [{"E":0}, {"D": 0}]
+}
+
+
+```
+
+
 ## Métodos
 
 Os seguintes métodos básicos foram implementados: 
@@ -37,6 +102,11 @@ Os seguintes métodos básicos foram implementados:
   * <p><b>ehRegular:</b> Verifica se um determinado grafo é regular ou não. Retorna True ou False a depender do grafo.</p>
   * <p><b>ehCompleto:</b> Verifica se um determinado grafo é completo ou não. Retorna True ou False a depender do grafo.</p> 
   * <p><b>ehConexo:</b> Verifica se um determinado grafo é conexo ou não. Retorna True ou False a depender do grafo. Utiliza o algoritimo de busca em largura.</p>
+
+<p><b>Algoritmo de Ordenação Topológica:</b> 
+
+  * <p>Retorna a ordenação topológica do grafo.</p>
+
  
 Duas versões do algoritmo de Dijkstra foram implementados:
 
