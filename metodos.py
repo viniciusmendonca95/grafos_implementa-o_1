@@ -225,3 +225,40 @@ def Djikstra2(vert, vert2):
     # Printa o menor caminho de um vértice a outro vértice
     print(f"Distância minima de {raiz} para {vert2}: {dist[vertices.index(vert2)]}     O caminho: {caminho}")
 
+
+def ordenacaoTopologica():
+    #declaração de variaveis
+    grafo = ut.lerGrafo()
+    grauEntrada = []
+    listaOrdenada = []
+    listAdj = []
+    vert = list(grafo.keys())
+    values = list(grafo.values())
+
+    while True:
+        #criação da lista com todos os adjacentes
+        for x in range(0, len(values)):
+            for y in range(0, len(values[x])):
+                listAdj.append(list(values[x][y])[0])
+
+        #criação da lista com o valor do grau de entrada dos vértices
+        for x in range(0, len(grafo)):
+            grauEntrada.append(listAdj.count(list(grafo.keys())[x]))
+
+        #criação da lista de ordenação topológica
+        for x in range(0,len(grauEntrada)):
+            if grauEntrada[x] == 0 and vert[x] not in listaOrdenada:
+                listaOrdenada.append(vert[x])
+                values[x] = list(["Vazio"])
+                grauEntrada[x] = None
+
+        #limpeza das listas
+        grauEntrada.clear()
+        listAdj.clear()
+
+        #condição de parada e impressão dos valores
+        if len(listaOrdenada) == len(vert):
+            return listaOrdenada
+            break
+
+        

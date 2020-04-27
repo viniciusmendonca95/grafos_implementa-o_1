@@ -11,7 +11,8 @@ def menuPrincipal():
     print("4- Método ehCompleto")
     print("5- Método ehConexo")
     print("6- Método do algoritimo do menor caminho (Dijkstra)")
-    print("7- Finalizar o programa")
+    print("7- Método de Ordenação Topológica")
+    print("8- Finalizar o programa")
     print()
     while True:
         msg = "Informe uma opção: "
@@ -87,11 +88,22 @@ def menuPrincipal():
                     print("4- Método ehCompleto")
                     print("5- Método ehConexo")
                     print("6- Método do algoritimo do menor caminho (Dijkstra)")
-                    print("7- Finalizar o programa")
+                    print("7- Método de Ordenação Topológica")
+                    print("8- Finalizar o programa")
                     print()
                     break
             print()
         if op == 7:
+            grafo = ut.lerGrafo()
+            ordenacao = met.ordenacaoTopologica()
+            print("Ordenação Topológica do grafo:", end="")
+            for x in range(0, len(ordenacao)):
+                if x == len(ordenacao)-1:
+                    print(f" {ordenacao[x]}")
+                else:
+                    print(f" {ordenacao[x]} ->", end="")
+            print()
+        if op == 8:
             print()
             print("FINALIZANDO")
             break
