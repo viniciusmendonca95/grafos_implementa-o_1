@@ -13,6 +13,8 @@ O arquivo "grafo.json" será configurado informando seus vértices, dentro dos s
   
 Exemplo da representação de grafos com seu .json que podem ser utilizados para testes no algoritmo:
 
+<b>Grafo valorado:</b>
+
 ![Grafo valorado](https://i.imgur.com/dh3NqNV.jpg)
 
 ```
@@ -27,6 +29,8 @@ Exemplo da representação de grafos com seu .json que podem ser utilizados para
 
 
 ```
+
+<b>Grafo direcionado:</b>
 
 ![Grafo direcionado](https://i.imgur.com/qQ7bwjc.jpg)
 
@@ -46,6 +50,8 @@ Exemplo da representação de grafos com seu .json que podem ser utilizados para
 
 ```
 
+<b>Grafo desconexo:</b>
+
 ![Grafo desconexo](https://i.imgur.com/R8VcGNL.jpg)
 
 ```
@@ -62,6 +68,8 @@ Exemplo da representação de grafos com seu .json que podem ser utilizados para
 
 ```
 
+<b>Grafo completo:</b>
+
 ![Grafo completo](https://i.imgur.com/sIcHkDf.jpg)
 
 ```
@@ -75,6 +83,8 @@ Exemplo da representação de grafos com seu .json que podem ser utilizados para
 
 
 ```
+
+<b>Grafo regular:</b>
 
 ![Grafo regular](https://i.imgur.com/zYIc1fj.jpg)
 
