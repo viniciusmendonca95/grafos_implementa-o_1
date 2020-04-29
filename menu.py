@@ -12,7 +12,8 @@ def menuPrincipal():
     print("5- Método ehConexo")
     print("6- Método do algoritimo do menor caminho (Dijkstra)")
     print("7- Método de Ordenação Topológica")
-    print("8- Finalizar o programa")
+    print("8- Método de Coloração")
+    print("9- Finalizar o programa")
     print()
     while True:
         msg = "Informe uma opção: "
@@ -96,14 +97,25 @@ def menuPrincipal():
         if op == 7:
             grafo = ut.lerGrafo()
             ordenacao = met.ordenacaoTopologica()
-            print("Ordenação Topológica do grafo:", end="")
-            for x in range(0, len(ordenacao)):
-                if x == len(ordenacao)-1:
-                    print(f" {ordenacao[x]}")
-                else:
-                    print(f" {ordenacao[x]} ->", end="")
+            if ordenacao == 1:
+                print("Este grafo não possui grau de entrada 0")
+            else:
+                print("Ordenação Topológica do grafo:", end="")
+                for x in range(0, len(ordenacao)):
+                    if x == len(ordenacao)-1:
+                        print(f" {ordenacao[x]}")
+                    else:
+                        print(f" {ordenacao[x]} ->", end="")
             print()
         if op == 8:
+            grafo = ut.lerGrafo()
+            vert = list(grafo.keys())
+            coloracao = met.Coloracao()
+            print("Coloração do grafo: ", end="")
+            for x in range(0, len(coloracao)):
+                print(f"{vert[x]} -> {coloracao[x]}    ", end="")
+            print()
+        if op == 9:
             print()
             print("FINALIZANDO")
             break

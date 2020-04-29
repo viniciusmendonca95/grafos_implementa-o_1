@@ -2,13 +2,13 @@
 def tratarMenu(msg):
     try:
         opcao = int(input(msg))
-        if opcao > 0 and opcao <= 8:
+        if opcao > 0 and opcao <= 9:
             return opcao
         else:
-            print("Informação invalida, digite uma opção entre 1 e 8")
+            print("Informação invalida, digite uma opção entre 1 e 9")
             return tratarMenu(msg)
     except:
-        print("Informação invalida, digite uma opção entre 1 e 8")
+        print("Informação invalida, digite uma opção entre 1 e 9")
         return tratarMenu(msg)
 
 

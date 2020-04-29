@@ -102,6 +102,28 @@ Exemplo da representação de grafos com seu .json que podem ser utilizados para
 
 ```
 
+<b>Grafo colorido:</b>
+
+![Grafo colorido](https://i.imgur.com/KFw9a7i.jpg)
+
+```
+{
+    "vertices" : [ "A", "B", "C", "D", "E", "F", "G"],
+    "A": [{"B":0}, {"D": 0}],
+    "B": [{"A":0}, {"C": 0}, {"D": 0}, {"E": 0}, {"F": 0}],
+    "C": [{"B":0}, {"F": 0}],
+    "D": [{"A":0}, {"B":0}, {"E":0}, {"G":0}],
+    "E": [{"B":0}, {"D": 0}, {"F": 0}, {"G": 0}],
+    "F": [{"B":0}, {"C":0}, {"E":0}, {"G":0}],
+    "G": [{"D":0}, {"E":0}, {"F":0}]
+
+}
+
+
+```
+
+
+
 
 ## Métodos
 
@@ -117,7 +139,12 @@ Os seguintes métodos básicos foram implementados:
 
   * <p>Retorna a ordenação topológica do grafo.</p>
 
- 
+
+<p><b>Algoritmo de Coloração:</b> 
+
+  * <p>Retorna a um valor referente a uma cor de um vértice.</p>
+
+
 Duas versões do algoritmo de Dijkstra foram implementados:
 
 <p><b>Algoritmo de Menor Caminho (Dijkstra):</b> 
