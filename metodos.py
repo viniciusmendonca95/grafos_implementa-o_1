@@ -232,6 +232,7 @@ def ordenacaoTopologica():
     grauEntrada = []
     listaOrdenada = []
     listAdj = []
+    flag = 0
     vert = list(grafo.keys())
     values = list(grafo.values())
 
@@ -244,6 +245,10 @@ def ordenacaoTopologica():
         #criação da lista com o valor do grau de entrada dos vértices
         for x in range(0, len(grafo)):
             grauEntrada.append(listAdj.count(list(grafo.keys())[x]))
+
+        if grauEntrada.count(0) == 0:
+            flag = 1
+            return flag
 
         #criação da lista de ordenação topológica
         for x in range(0,len(grauEntrada)):
@@ -259,6 +264,29 @@ def ordenacaoTopologica():
         #condição de parada e impressão dos valores
         if len(listaOrdenada) == len(vert):
             return listaOrdenada
-            break
 
-        
+
+def Coloracao():
+    grafo = ut.lerGrafo()  
+    listaComCor = []
+    listaSemCor = []
+    listaColorida = []
+    vert = list(grafo.keys())
+    values = list(grafo.values())
+
+    for x in range(0, len(vert)):
+        listaColorida.append(0)
+
+    cor = 1
+
+    while len(listaComCor) != len(vert):
+        for vertice in range(0, len(vert)):
+            if vert[vertice] not in listaComCor and vert[vertice] not in listaSemCor :
+                for x in range(0, len(values[vertice])):
+                    listaSemCor.append(list(values[vertice][x])[0])
+                listaColorida[vertice] = cor
+                listaComCor.append(vert[vertice])            
+        cor += 1
+        listaSemCor.clear()
+    return listaColorida
+
